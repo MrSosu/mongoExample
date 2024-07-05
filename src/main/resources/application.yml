@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      username: sosu
+      password: password
+      host: localhost
+      port: 27017
+      database: sosudb
+      authentication-database: admin
