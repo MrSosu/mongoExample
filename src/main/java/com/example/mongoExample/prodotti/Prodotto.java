@@ -1,8 +1,12 @@
 package com.example.mongoExample.prodotti;
 
+import com.example.mongoExample.categorie.Categoria;
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
 
 @Document
 @Getter
@@ -16,6 +20,9 @@ public class Prodotto {
     private String id;
     private String nome;
     private String descrizione;
+    private List<String> tags;
     private Integer quantita;
+    @DBRef
+    private Categoria categoria;
 
 }
